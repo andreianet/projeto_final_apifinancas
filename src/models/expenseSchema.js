@@ -8,7 +8,7 @@ const expenseSchema = new Schema({
         auto: true,
         require: true
     },
-    describe:{
+    description:{
       type: String,
       required: true,  
     },
