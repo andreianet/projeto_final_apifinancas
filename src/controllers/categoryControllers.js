@@ -15,7 +15,7 @@ const getAllCategory = (req, res) => {
 
 const addCategory = (req, res) => {
     const categoryBody = req.body;
-    const category = new CategoryCollections(categoryBody);
+    const category = new categoryCollections(categoryBody);
 
     category.save((error) => {
         if (error) {
