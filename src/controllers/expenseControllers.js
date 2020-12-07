@@ -9,9 +9,29 @@ const getAllExpense = (req, res) => {
         }
     }).sort({name:1})
 }
+
+const groupExpense = (req, res) => {
+    const financeID = req.params.finance;
+    const categoryID = req.params.category;
+    expenseCollections.findById(financeID, categoryID,(error, expense) =>{
+        if (error) {
+            return res.status(500).send(error)
+        }else if(expense) {
+            return res.status(200).send({
+                message:'Ok!',
+                expense
+            })
+        }else{
+            return res.status(404).send('testando....')
+        }
+
+    })
+}
+
 const addExpense = (req, res) => {
     const expenseBody= req.body;
-    const expense = new expenseCollections(expenseBody);
+    
+    const expense = new expenseCollections(expenseBody)
 
     expense.save(error => {
         if (error) {
@@ -71,5 +91,6 @@ module.exports = {
     getAllExpense,
     addExpense,
     delExpense,
-    updateExpense
+    updateExpense,
+    groupExpense
 }

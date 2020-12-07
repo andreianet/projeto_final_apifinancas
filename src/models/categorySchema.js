@@ -2,13 +2,13 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const categorySchema = new Schema({
-    expenseId:{
+    categoryId:{
         type: Schema.Types.ObjectId,
         ref: 'expense',
         require: true
     },
     name:{
-        type: String,
+        type:['Alimentação','Farmacia','Colegio','Vestuario'],
         required: true
     },
 })

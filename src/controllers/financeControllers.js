@@ -1,14 +1,16 @@
 const financeCollections = require('../models/financeSchema')
 
 const getAllFinance = (req, res) => { 
-    console.log(req.url);
-    financeCollections.find({"name":{$type:"array"}},(error, finance) => {
+    console.log(req.url); 
+           
+    financeCollections.find({"finance":{$type:"array"}},(error, finance) => {
         if (error){
             return res.status(500).send(error)
         }else{
-            return res.status(200).send("List of Finances")
+            return res.status(200).send(finance)
+            
         }
-    })
+    }).sort({name:1})
 }
 /*const addFinance = (req, res) => {
     const financeBody = req.body;
@@ -25,6 +27,7 @@ const getAllFinance = (req, res) => {
         }
     })
 }*/
+
 
 module.exports = {
     getAllFinance,

@@ -13,11 +13,11 @@ const expenseSchema = new Schema({
       required: true,  
     },
     category:{
-        type: String,
+        type: mongoose.Schema.Types.ObjectId, ref: 'category',
         required: true,  
       },
     finance:{
-        type: String,
+        type: mongoose.Schema.Types.ObjectId, ref: 'finance',
         required:true
     },
     value:{

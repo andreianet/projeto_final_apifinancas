@@ -3,6 +3,7 @@ const categoryCollections = require('../models/categorySchema')
 
 const getAllCategory = (req, res) => {
     console.log(req.url);
+    
 
     categoryCollections.find((error, categ) => {
         if (error){
