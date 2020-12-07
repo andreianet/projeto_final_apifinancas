@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 
 //String Connection
 const connect = () => {
-    mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true }) //parsea a conexão 
+    mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true }) //parsea a conexão 
     const connection = mongoose.connection
     //caso der um erro 
     connection.on('error', ()=> console.error("Error Connection"))
