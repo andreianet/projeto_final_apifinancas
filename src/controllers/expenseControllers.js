@@ -10,7 +10,7 @@ const getAllExpense = (req, res) => {
     }).sort({name:1})
 }
 
-const groupExpense = (req, res) => {
+/*const groupIDExpense = (req, res) => {
     const financeID = req.params.finance;
     const categoryID = req.params.category;
     expenseCollections.findById(financeID, categoryID,(error, expense) =>{
@@ -26,14 +26,17 @@ const groupExpense = (req, res) => {
         }
 
     })
-}
+}*/
 
 const addExpense = (req, res) => {
+    const financeId = req.body.financeId;
+    const categoryId = req.body.categoryId;
     const expenseBody= req.body;
     
     const expense = new expenseCollections(expenseBody)
 
     expense.save(error => {
+        console.log(financeId, categoryId,expense);
         if (error) {
             return res.status(400).send(error);
         }else {
@@ -92,5 +95,5 @@ module.exports = {
     addExpense,
     delExpense,
     updateExpense,
-    groupExpense
+    //groupIDExpense
 }
