@@ -8,7 +8,7 @@ const categorySchema = new Schema({
         require: true
     },
     name:{
-        type:['Alimentação','Farmacia','Colegio','Vestuario'],
+        type:['Alimentacao','Farmacia','Colegio','Vestuario'],
         required: true
     },
 })
