@@ -1,9 +1,12 @@
 const financeCollections = require('../models/financeSchema')
 
+
+
+
 const getAllFinance = (req, res) => { 
-    console.log(req.url); 
+    console.log(req.url);    
            
-    financeCollections.find({"finance":{$type:"array"}},(error, finance) => {
+    financeCollections.find((error, finance) => {
         if (error){
             return res.status(500).send(error)
         }else{
@@ -32,4 +35,5 @@ const getAllFinance = (req, res) => {
 module.exports = {
     getAllFinance,
     //addFinance
+   
 }
