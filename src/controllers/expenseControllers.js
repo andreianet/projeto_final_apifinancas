@@ -1,43 +1,23 @@
 const expenseCollections = require('../models/expenseSchema')
 
 const getAllExpense = (req, res) => {
+    //pegar id e mostrar name category e finance    
     expenseCollections.find((error, exp) => {
         if (error){
             return res.status(500).send(error)
         }else{
             return res.status(200).send(exp)
         }
-    }).sort({name:1})
+    })//.sort({name:1})
 }
-
-/*const groupIDExpense = (req, res) => {
-    const financeID = req.params.finance;
-    const categoryID = req.params.category;
-    expenseCollections.findById(financeID, categoryID,(error, expense) =>{
-        if (error) {
-            return res.status(500).send(error)
-        }else if(expense) {
-            return res.status(200).send({
-                message:'Ok!',
-                expense
-            })
-        }else{
-            return res.status(404).send('testando....')
-        }
-
-    })
-}*/
-
-const addExpense = (req, res) => {
-    const financeId = req.body.financeId;
-    const categoryId = req.body.categoryId;
+const addExpense = (req, res) => {   
     const expenseBody= req.body;
     
-    const expense = new expenseCollections(expenseBody)
-
-    expense.save(error => {
-        console.log(financeId, categoryId,expense);
-        if (error) {
+    
+    const expense = new expenseCollections(expenseBody);
+    expense.save(error => {             
+        if (error) {  
+             console.log(error);            
             return res.status(400).send(error);
         }else {
             return res.status(200).send({
@@ -94,6 +74,6 @@ module.exports = {
     getAllExpense,
     addExpense,
     delExpense,
-    updateExpense,
-    //groupIDExpense
+    updateExpense
+    
 }

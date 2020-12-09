@@ -2,27 +2,25 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const expenseSchema = new Schema({
-    _id:{
-        type: mongoose.Schema.Types.ObjectId,
-        auto: true,
-        require: true
-    },
+const expenseSchema = new Schema({    
     description:{
       type: String,
       required: true,  
     },
     category:{
-        type: mongoose.Schema.Types.ObjectId, ref: 'category',
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'category',
         required: true,  
       },
     finance:{
-        type: mongoose.Schema.Types.ObjectId, ref: 'finance',
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'finance',
         required:true
     },
     value:{
         type: Number,
-        required: true
+        required: true,
+        maxValue: 4
     },
     data:{
         type: Date,
