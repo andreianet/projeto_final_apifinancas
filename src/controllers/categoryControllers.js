@@ -1,4 +1,4 @@
-const {model} = require('mongoose')
+//const {model} = require('mongoose')
 const categoryCollections = require('../models/categorySchema')
 
 const getAllCategory = (req, res) => {
