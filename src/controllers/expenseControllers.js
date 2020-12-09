@@ -1,18 +1,23 @@
 const expenseCollections = require('../models/expenseSchema')
 
+        
 const getAllExpense = (req, res) => {
-    //pegar id e mostrar name category e finance    
-    expenseCollections.find((error, exp) => {
-        if (error){
-            return res.status(500).send(error)
-        }else{
-            return res.status(200).send(exp)
-        }
-    })//.sort({name:1})
+    const finance = req.params.id;
+    const category = req.params.category           
+        expenseCollections.findById(finance, category,(error, exp) => {
+            if (error){
+                return res.status(500).send(error)
+            }else{
+                return res.status(200).send(exp)
+            }
+        }).populate(
+            "finance", 
+            "category"
+        )//.sort({name:1})
 }
+
 const addExpense = (req, res) => {   
-    const expenseBody= req.body;
-    
+    const expenseBody= req.body;    
     
     const expense = new expenseCollections(expenseBody);
     expense.save(error => {             
@@ -71,7 +76,7 @@ const updateExpense = (req, res) => {
 }
 
 module.exports = {
-    getAllExpense,
+    getAllExpense,   
     addExpense,
     delExpense,
     updateExpense

@@ -8,7 +8,7 @@ const controller = require('../controllers/expenseControllers')
  * @access Public
  * @endpoint htt://localhost:porta/expense
  */
-router.get('/', controller.getAllExpense)
+router.get('/allexpense', controller.getAllExpense)
 
 
 router.post('/create', controller.addExpense)
