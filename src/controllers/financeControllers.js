@@ -1,8 +1,5 @@
 const financeCollections = require('../models/financeSchema')
 
-
-
-
 const getAllFinance = (req, res) => { 
     console.log(req.url);    
            
@@ -15,7 +12,7 @@ const getAllFinance = (req, res) => {
         }
     }).sort({name:1})
 }
-/*const addFinance = (req, res) => {
+const addFinance = (req, res) => {
     const financeBody = req.body;
     const finance = new financeCollections(financeBody);   
 
@@ -29,11 +26,11 @@ const getAllFinance = (req, res) => {
             })
         }
     })
-}*/
+}
 
 
 module.exports = {
     getAllFinance,
-    //addFinance
+    addFinance
    
 }

@@ -9,6 +9,6 @@ const controller = require('../controllers/financeControllers')
  * @endpoint htt://localhost:porta/finance/allfinance
  */
 router.get('/allfinance', controller.getAllFinance)
-//router.post('/finance/create', controller.addFinance)
+router.post('/create', controller.addFinance)
 
 module.exports = router

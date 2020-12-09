@@ -4,11 +4,10 @@ const Schema = mongoose.Schema
 const financeSchema = new Schema({
     financeId:{
         type: Schema.Types.ObjectId,
-        ref: 'expense',
         require: true
-    },
+    },    
     name:{
-        type:['Renda Fixa', 'Renda Extra'],
+        type: String,
         required: true
     },
 
