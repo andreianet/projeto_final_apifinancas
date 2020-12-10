@@ -38,7 +38,7 @@ DELETE  | /category/delete/:id   |  Deleta uma categoria                  |
 
 ### Exemplo do GET(allexpense)
 
-![Alt](C:/Users/andre/Desktop/projeto_final_apifinancas/img/exemplo_allexpense.png)
+![Alt](https://github.com/andreianet/projeto_final_apifinancas/blob/master/img/exemplo_allexpense.png)
 
 
 ## Entregável - MVP
