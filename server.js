@@ -16,12 +16,11 @@ const category = require('./src/routes/categoryRoute')
 const finance = require('./src/routes/financeRoute')
 
 //String Connection
-
     mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true }) //parsea a conexão 
     const connection = mongoose.connection
     //caso der um erro 
     connection.on('error', ()=> console.error("Error Connection"))
-    connection.once('open', ()=> console.log("Conncetion MongoDB Success..."))
+    connection.once('open', ()=> console.log("Connected with MongoDB... OK!"))
 
 app.use(cors());
 app.use(express.json());
@@ -32,7 +31,7 @@ app.use("/category", category);
 app.use("/finance", finance);
 
 app.listen(PORT, function () {
-    console.log(`Server OK!Na porta:${PORT}`);
+    console.log(`Server rodando...!Na porta:${PORT}`);
 })
 
 module.exports = app

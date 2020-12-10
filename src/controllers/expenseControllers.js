@@ -15,21 +15,6 @@ const getAllExpense = (req, res) => {
     });
 }
 
-/*const getAllExpense = (req, res) => {
-    const finance = req.params.id;
-    const category = req.params.category           
-        expenseCollections.findById(finance, category,(error, exp) => {
-            if (error){
-                return res.status(500).send(error)
-            }else{
-                return res.status(200).send(exp)
-            }
-        }).populate(
-            "finance", 
-            "category"
-        ).exec()//.sort({name:1})
-}*/
-
 const addExpense = (req, res) => {   
     const expenseBody= req.body;    
     
@@ -40,7 +25,7 @@ const addExpense = (req, res) => {
             return res.status(400).send(error);
         }else {
             return res.status(200).send({
-                message: 'Expense Created Success',
+                message: 'Expense Created Success!',
                 expense
             })
         }

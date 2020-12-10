@@ -28,7 +28,6 @@ const addFinance = (req, res) => {
     })
 }
 
-
 module.exports = {
     getAllFinance,
     addFinance

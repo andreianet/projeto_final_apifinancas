@@ -28,10 +28,7 @@ const expenseSchema = new Schema({
     },
     
 })
-//const category = mongoose.model('category', categorySchema)
-//const finance = mongoose.model('finance', financeSchema)
 
 const expenseCollections = mongoose.model('expense', expenseSchema)
-
 
 module.exports = expenseCollections

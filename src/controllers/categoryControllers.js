@@ -1,10 +1,7 @@
-//const {model} = require('mongoose')
 const categoryCollections = require('../models/categorySchema')
 
 const getAllCategory = (req, res) => {
     console.log(req.url);
-    
-
     categoryCollections.find((error, categ) => {
         if (error){
             return res.status(500).send(error)
@@ -23,7 +20,7 @@ const addCategory = (req, res) => {
             return res.status(400).send(error);
         }else {
             return res.status(200).send({
-                message: 'Category Created Success',
+                message: 'Category created Successfully!',
                 category
             })
         }
@@ -41,7 +38,7 @@ const delCategory = (req, res) => {
             })
         }else {
             if(category){
-                return res.status(200).send('Category Deleted Success')                
+                return res.status(200).send('Category Deleted Success!')                
             }else{
                 return res.status(404)
             }
@@ -49,7 +46,6 @@ const delCategory = (req, res) => {
         }
         
     })
-
    
 }
 
