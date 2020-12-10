@@ -28,18 +28,17 @@ Método  |  Caminho               |  Descrição                             |
 GET     |      /                 |  Retorna uma index de apresentação     |
 GET     | /expense/allexpense    |  Retorna todas despesas                |
 GET     | /finance/allfinance    |  Retorna as finances                   |
-GET     | /finance/allcategory   |  Retorna as categprias                 |
+GET     | /category/allcategory  |  Retorna as categorias                 |
 POST    | /expense/create        |  Adiciona uma despesa                  |
 POST    | /category/create       |  Adiciona uma categoria                |
 POST    | /finance/create        |  Adiciona uma finance                  |
-POST    | /expense/create        |  Adiciona uma despesa                  |
 PUT     | /expense/update/:id    |  Atualiza uma despesa                  |
 DELETE  | /expense/delete/:id    |  Deleta uma despesa                    |
 DELETE  | /category/delete/:id   |  Deleta uma categoria                  |
 
 ### Exemplo do GET(allexpense)
 
-![Alt](C:\Users\andre\Desktop\projeto_final_apifinancas\img\exemplo_allexpense.png)
+![Alt](C:/Users/andre/Desktop/projeto_final_apifinancas/img/exemplo_allexpense.png)
 
 
 ## Entregável - MVP
