@@ -42,10 +42,11 @@ DELETE  | /category/delete/:id   |  Deleta uma categoria                  |
 
 
 ## Entregável - MVP
-* Cadastro de categorias
-* Cadastro de finances
+* Cadastro de categorias e listagem
+* Cadastro de finances e listagem
 * Cadastro de expense(despesas)
-* Listar despesas, por categorias e finances.
+* Listar despesas, por categorias e finances
+* Deletar category e expense
 * CRUD completo no Schema Expense.
 
 
