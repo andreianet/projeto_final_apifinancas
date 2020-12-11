@@ -31,7 +31,7 @@ app.use("/category", category);
 app.use("/finance", finance);
 
 app.listen(PORT, function () {
-    console.log(`Server rodando...!Na porta:${PORT}`);
+    console.log(`Server started on port ${PORT}; ` + 'press Ctrl-C to terminate');
 })
 
 module.exports = app
