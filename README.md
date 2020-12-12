@@ -4,9 +4,7 @@
 Objetivo da **API de Finanças** é facilitar, controlar e organizar com mais eficaz as despesas das pessoas,
 seja um gasto diário ou mensal.
 
-## Arquitetura
-Projeto_Final_APIFINANCAS
-|
+## Arquitetura - Projeto_Final_APIFINANCAS
 ![Alt](https://github.com/andreianet/projeto_final_apifinancas/blob/master/img/arquitetura.png)
 
 
