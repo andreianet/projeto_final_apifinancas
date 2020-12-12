@@ -7,7 +7,6 @@ seja um gasto diário ou mensal.
 ## Arquitetura
 Projeto_Final_APIFINANCAS
 |
-\--
 ![Alt](https://github.com/andreianet/projeto_final_apifinancas/blob/master/img/arquitetura.png)
 
 
