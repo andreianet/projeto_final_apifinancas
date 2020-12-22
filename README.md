@@ -1,5 +1,5 @@
 # API de Finanças | {Reprograma}
-[Alt](https://github.com/andreianet/projeto_final_apifinancas/blob/master/img/api_finance.png)
+![Alt](https://github.com/andreianet/projeto_final_apifinancas/blob/master/img/api_finance.png)
 
 ## Descrição do Projeto
 Objetivo da **API de Finanças** é facilitar, ajudar no controle das finanças e organizar com mais eficaz as despesas pessoais, seja um gasto diário ou mensal.
