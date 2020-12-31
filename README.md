@@ -10,8 +10,9 @@ Objetivo da **API de Finanças** é facilitar, ajudar no controle das finanças 
 
 ## Ferramentas/Tecnologias Utilizadas:
 
+* JavaScript
 * Nodejs
-* mongodb
+* MongoDB
 * Mongoose
 * Npm
 * Cors
@@ -20,6 +21,8 @@ Objetivo da **API de Finanças** é facilitar, ajudar no controle das finanças 
 * DotEnv
 * IDE VSCode
 * Postman
+* Heroku
+* Mongo Atlas
 
 ## Schemas Criados: Expense | Category | Finances 
 Os schemas de category e finances, são referenciados pelo Expense.
